@@ -24,9 +24,9 @@ import java.util.ArrayList;
  */
 public class FacilitiesFragment extends Fragment {
 
-    private String[] mFoodPlaces = new String[]{"Baskin Robbins","Burger King","Costa","Dominos Pizza","Dunkin Donuts","KFC","Mcdonalds"};
-    private String[] mRestPlaces = new String[]{"Toilets","Taxi","WiFi","Bed","Hotel Room","Television","GYM"};
-    private ArrayList<CardView> cards = new ArrayList<>();
+    private String[] mFoodPlaces, mRestPlaces;
+    private ArrayList<CardView> mCards;
+    private View mFragment;
 
     public FacilitiesFragment() {
         // Required empty public constructor
@@ -36,7 +36,14 @@ public class FacilitiesFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View mFragment = inflater.inflate(R.layout.fragment_facilities, container, false);
+        mFragment = inflater.inflate(R.layout.fragment_facilities, container, false);
+
+        mFoodPlaces = new String[]{
+                "Baskin Robbins", "Burger King", "Costa", "Dominos Pizza",
+                "Dunkin Donuts", "KFC", "Mcdonalds"
+        };
+        mRestPlaces = new String[]{"Toilets", "Taxi", "WiFi", "Bed", "Hotel Room", "Television", "GYM"};
+        mCards = new ArrayList<>();
 
         populateView((LinearLayout) mFragment.findViewById(R.id.food), mFoodPlaces);
         populateView((LinearLayout) mFragment.findViewById(R.id.rest), mRestPlaces);
@@ -45,7 +52,7 @@ public class FacilitiesFragment extends Fragment {
     }
 
     private void populateView(LinearLayout layout, String[] resources) {
-        for(String resource : resources) {
+        for (String resource : resources) {
             View cardLayout = getActivity().getLayoutInflater().inflate(R.layout.card_item_view, null);
             ((ImageView) cardLayout.findViewById(R.id.card_image))
                     .setImageResource(getResources()
@@ -63,7 +70,7 @@ public class FacilitiesFragment extends Fragment {
             cardView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(final View v) {
-                    for(CardView card : cards)
+                    for (CardView card : mCards)
                         card.setCardBackgroundColor(Color.WHITE);
 
                     ValueAnimator colorAnim = ObjectAnimator.ofInt(v, "cardBackgroundColor", Color.WHITE, 0xFFD8F0F4);
@@ -72,7 +79,7 @@ public class FacilitiesFragment extends Fragment {
                     colorAnim.start();
                 }
             });
-            cards.add(cardView);
+            mCards.add(cardView);
         }
     }
 }

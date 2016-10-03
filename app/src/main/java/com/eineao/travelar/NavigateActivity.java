@@ -30,14 +30,14 @@ public class NavigateActivity extends AppCompatActivity {
      * The {@link ViewPager} that will host the section contents.
      */
     private ViewPager mViewPager;
+    private FloatingActionButton mFab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigate);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
         setTitle(getIntent().getStringExtra("AirportName"));
         Toast.makeText(this, "Welcome to " + getIntent().getStringExtra("AirportName"), Toast.LENGTH_SHORT).show();
         // Create the adapter that will return a fragment for each of the three
@@ -49,11 +49,10 @@ public class NavigateActivity extends AppCompatActivity {
         mViewPager.setAdapter(mSectionsPagerAdapter);
         mViewPager.setCurrentItem(1);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
-        tabLayout.setupWithViewPager(mViewPager);
+        ((TabLayout) findViewById(R.id.tabs)).setupWithViewPager(mViewPager);
 
-        final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        mFab = (FloatingActionButton) findViewById(R.id.fab);
+        mFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(view.getContext(), "Starting Navigation...", Toast.LENGTH_SHORT).show();
@@ -64,9 +63,9 @@ public class NavigateActivity extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
                 if(position == 0)
-                    fab.show();
+                    mFab.show();
                 else
-                    fab.hide();
+                    mFab.hide();
             }
 
             @Override

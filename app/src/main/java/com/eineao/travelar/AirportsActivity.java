@@ -12,15 +12,30 @@ import android.widget.TextView;
 
 public class AirportsActivity extends AppCompatActivity {
 
+    private String[] mAirportsNames, mAirportsLocations;
+    private ArrayAdapter<String> mAirportsAdapter;
+    private ListView mAirportsList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_airports);
 
-        final String[] mAirportsNames = new String[] {"Dubai International Airport","Hamad International Airport","King Abdulaziz International Airport","Abu Dhabi International Airport","King Khalid International Airport","Kuwait International Airport","Bahrain International Airport","Muscat International Airport","Sharjah International Airport","King Fahd International Airport"};
-        final String[] mAirportsLocations = new String[] {"United Arab Emirates, Dubai","Qatar, Doha","Saudi Arabia, Jeddah","United Arab Emirates, Abu Dhabi","Saudi Arabia, Riyadh","Kuwait, Kuwait City","Bahrain, Muharraq","Oman, Muscat","United Arab Emirates, Sharjah","Saudi Arabia, Dammam"};
+        mAirportsNames = new String[]{
+                "Dubai International Airport", "Hamad International Airport",
+                "King Abdulaziz International Airport", "Abu Dhabi International Airport",
+                "King Khalid International Airport", "Kuwait International Airport",
+                "Bahrain International Airport", "Muscat International Airport",
+                "Sharjah International Airport", "King Fahd International Airport"
+        };
+        mAirportsLocations = new String[]{
+                "United Arab Emirates, Dubai", "Qatar, Doha", "Saudi Arabia, Jeddah",
+                "United Arab Emirates, Abu Dhabi", "Saudi Arabia, Riyadh",
+                "Kuwait, Kuwait City", "Bahrain, Muharraq", "Oman, Muscat",
+                "United Arab Emirates, Sharjah", "Saudi Arabia, Dammam"
+        };
 
-        ArrayAdapter<String> mAirportsAdapter = new ArrayAdapter<String>(this, R.layout.item_view, R.id.title, mAirportsNames) {
+        mAirportsAdapter = new ArrayAdapter<String>(this, R.layout.item_view, R.id.title, mAirportsNames) {
             public View getView(int position, View convertView, ViewGroup parent) {
                 View view = super.getView(position, convertView, parent);
                 TextView text1 = (TextView) view.findViewById(R.id.title);
@@ -31,7 +46,7 @@ public class AirportsActivity extends AppCompatActivity {
             }
         };
 
-        ListView mAirportsList = (ListView) findViewById(R.id.airports);
+        mAirportsList = (ListView) findViewById(R.id.airports);
         mAirportsList.setAdapter(mAirportsAdapter);
         mAirportsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
