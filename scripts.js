@@ -3,15 +3,15 @@ $(document).ready(function() {
     // Declare a function to load child page
     $.extend({ loadPage: function(title) {
         // Load page into #content from provided title
-        $("#content").load(title.toLowerCase() + ".html");
+        $("#content").load(title.slice(1).toLowerCase() + ".html");
     }});
 
     // Initially, load page by hash if any, otherwise load home
-    $.loadPage(location.hash ? location.hash : "Home");
+    $.loadPage(location.hash ? location.hash : "#Home");
 
     // When an anchor tag is clicked
     $("a").click(function() {
         // Load page according to hash from <a>'s href
-        $.loadPage($(this).attr("href").slice(1));
+        $.loadPage($(this).attr("href"));
     });
 });
