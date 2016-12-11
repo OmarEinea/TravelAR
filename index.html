@@ -4,38 +4,46 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-        <!-- Import Our CSS Styles -->
+		<!-- Import Our CSS Styles -->
 		<link rel="stylesheet" href="styles.css">
 
 		<!-- Import jQuery and Materialize Javascript -->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-        <!-- Import Our JS Scripts -->
+		<!-- Import Our JS Scripts -->
 		<script type="text/javascript" src="scripts.js"></script>
-        
-        <title>TravelAR</title>
+		
+		<title>TravelAR</title>
 	</head>
 
 	<body>
-		<nav>
-			<ul>
-				<li><a href="#Home">Home</a></li>
-				<li><a href="#Features">Features</a></li>
-				<li><a href="#Tech">Technology</a></li>
-				<li><a href="#Videos">Videos</a></li>
-				<li><a href="#Pictures">Pictures</a></li>
-				<li><a href="#Demo">Demo</a></li>
-				<li><a href="#Download">Download</a></li>
-				<li><a href="#Future">Future</a></li>
-				<li><a href="#Suggest">Suggestions</a></li>
-				<li><a href="#Support">Support Us</a></li>
-				<li><a href="#Team">Our Team</a></li>
-				<li><a href="#Contact">Contact Us</a></li>
-				<li><a href="#AR">What is AR?</a></li>
-				<li><a href="#Login">Login</a></li>
-				<li><a href="#Register">Register</a></li>
-			</ul>
+		<nav class="nav-extended">
+			<div class="nav-wrapper container">
+				<ul id="main-nav">
+					<li><a href="#Home">Home</a></li>
+					<li><a href="#Specs">Specs</a></li>
+					<li><a href="#Gallery">Gallery</a></li>
+					<li><a href="#Download">Download</a></li>
+					<li><a href="#Improve">Improvements</a></li>
+					<li><a href="#About">About</a></li>
+					<li class="right"><a href="#Login">Login</a></li>
+				</ul>
+				<ul class="tabs tabs-transparent">
+					<li class="tab specs"><a href="#Features">Features</a></li>
+					<li class="tab specs"><a href="#Tech">Technology</a></li>
+					<li class="tab gallery"><a href="#Pictures">Pictures</a></li>
+					<li class="tab gallery"><a href="#Videos">Videos</a></li>
+					<li class="tab gallery"><a href="#Demo">Demo</a></li>
+					<li class="tab about"><a href="#AR">What is AR?</a></li>
+					<li class="tab about"><a href="#Team">Our Team</a></li>
+					<li class="tab about"><a href="#Contact">Contact Us</a></li>
+					<li class="tab improve"><a href="#Future">Future</a></li>
+					<li class="tab improve"><a href="#Suggest">Suggestions</a></li>
+					<li class="tab improve"><a href="#Support">Support Us</a></li>
+				</ul>
+			</div>
 		</nav>
-		<div id="content"></div>
+		
+		<div id="content" class="container"></div>
 	</body>
 </html>

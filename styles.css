@@ -1,7 +1,11 @@
-body {
-    background-color: #a7ffeb;
+nav {
+    background-color: #0069ff;
 }
 
 h3 {
     text-align: center;
+}
+
+.tabs {
+	height: 0px;
 }
