@@ -1,11 +1,18 @@
 // jQuery script that runs on page load
 $(document).ready(function() {
+	$.extend({
+		click: function(button) {
+			$("a[href='" + button + "']").click();
+		}
+	});
 	// When an anchor tag is clicked
 	$("a").click(function() {
 		// If the link isn't already active
 		if(!$(this).hasClass("active")) {
-			// Store page title after extracting it from <a>'s href
-			var page = $(this).attr("href").slice(1).toLowerCase();
+			// Replace URL's hash with <a>'s href
+			location.hash = $(this).attr("href")
+			// Store page title after extracting it from hash
+			var page = location.hash.slice(1).toLowerCase();
 			// If the clicked link isn't of the sub-pages
 			if(!$(this).parent().hasClass("tab")) {
 				// Deactivate all links except the clicked one
@@ -41,5 +48,5 @@ $(document).ready(function() {
 	// Deactivate all links initially
 	$(".tab a").removeClass("active");
 	// Initially, click link from hash if any, otherwise click home
-	$("a[href='" + (location.hash ? location.hash : "#Home") + "']").click();
+	$.click(location.hash ? location.hash : "#Home");
 });

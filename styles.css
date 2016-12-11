@@ -6,6 +6,36 @@ h3 {
     text-align: center;
 }
 
+a {
+	cursor: pointer;
+}
+
 .tabs {
 	height: 0px;
+}
+
+.container .row {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+#demo-icons .row {
+	margin-top: 80px;
+}
+
+li ol {
+	list-style-type: lower-alpha;
+}
+
+#fullscreen {
+	position: absolute;
+	max-height: 100%;
+	width: 656px;
+	top: 0 !important;
+	bottom: 0;
+}
+
+#fullscreen iframe {
+	width: 100%;
+	height: calc(100% - 48px);
 }
