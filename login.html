@@ -1,2 +1,29 @@
-<h3>Login</h3>
-New User? <a onclick="$('#content').load('register.html')" class="btn blue">Register</a>
+<div class="col l6 offset-l3 s12">
+    <div class="card-panel">
+        <div class="row">
+            <div class="col s12 input-field">
+                <i class="fa fa-envelope prefix"></i>
+                <input id="email" type="email" class="validate">
+                <label for="email">Email Address</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 input-field">
+                <i class="fa fa-key prefix"></i>
+                <input id="password" type="password" class="validate">
+                <label for="password">Password</label>
+            </div>
+        </div>
+        <div class="row">
+            <a class="btn-large blue col s12">Login</a>
+        </div>
+        <div class="row">
+            <div class="col s5"><hr></div>
+            <div class="col s2 center">New?</div>
+            <div class="col s5"><hr></div>
+        </div>
+        <div class="row">
+            <a onclick="$('#content').load('register.html')" class="btn-large blue col s12">Register</a>
+        </div>
+    </div>
+</div>
