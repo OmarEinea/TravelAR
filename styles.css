@@ -13,11 +13,17 @@ a {
 .tabs {
 	height: 0px;
 }
+img {
+    display: block;
+    margin: auto;
+    width: 40%;
+}
 
 .container .row {
 	margin-left: 0;
 	margin-right: 0;
 }
+
 
 #demo-icons .row {
 	margin-top: 80px;
