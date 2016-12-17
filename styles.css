@@ -69,9 +69,10 @@ input[type=radio]:checked + label:after {
     border-color: #2196f3;
 }
 
+#fimage
 { display: block}
 
-dt.f
+dt
 {
     font-weight: bold;
 }
