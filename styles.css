@@ -22,7 +22,6 @@ img{
     float:left;
 }
 
-
 #demo-icons .row {
 	margin-top: 80px;
 }
@@ -69,3 +68,6 @@ input[type=radio]:checked + label:after {
 	background-color: #2196f3;
     border-color: #2196f3;
 }
+
+img.f
+{ display: block}
