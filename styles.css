@@ -69,6 +69,20 @@ input[type=radio]:checked + label:after {
     border-color: #2196f3;
 }
 
+.input-field input[name=gender] + label i {
+    margin-top: -12px;
+    margin-left: 8px;
+}
+
+.autocomplete-content {
+	position: absolute;
+	width: calc(100% - 4.5rem) !important;
+}
+
+.dropdown-content li > a, .dropdown-content li > span {
+    color: #2196f3;
+}
+
 #fimage
 { display: block}
 
