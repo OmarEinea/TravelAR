@@ -18,6 +18,9 @@ a {
 	margin-left: 0;
 	margin-right: 0;
 }
+img{
+    float:left;
+}
 
 
 #demo-icons .row {
