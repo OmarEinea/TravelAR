@@ -40,3 +40,29 @@ li ol {
 	width: 100%;
 	height: calc(100% - 48px);
 }
+
+@media only screen and (min-width: 993px) {
+	#forgot-password {
+		width: 30%;
+	}
+}
+/* label focus color */
+.input-field input[type]:focus + label,
+.input-field .prefix.active {
+	color: #2196f3;
+}
+/* label underline focus color */
+.input-field input[type]:focus {
+	border-bottom-color: #2196f3;
+	box-shadow: 0 1px 0 0 #2196f3;
+}
+
+input[type=checkbox]:checked + label:before {
+	border-bottom-color: #2196f3;
+	border-right-color: #2196f3;
+}
+
+input[type=radio]:checked + label:after {
+	background-color: #2196f3;
+    border-color: #2196f3;
+}
