@@ -108,9 +108,10 @@ ul.sp li
 {
     font-size: 21;
     font-family:fantasy;
-    padding-bottom: 12px;
-    list-style-type:square;
+    padding: 20px;
 }
+
+
 
 p.sp
 {
@@ -118,9 +119,18 @@ p.sp
     font-family:fantasy; 
 }
 
-section.support
+section.support li
 {
-    background-color: none;
+    text-align: justify;
+    margin-bottom: 20;
+    margin-top: 45;
+}
+
+section.features #f1,#f2,#f3
+{
+    text-align: center;
+    margin-bottom: 50;
+    display:block;
 }
 
 section.tech p img, section.features img
@@ -130,8 +140,23 @@ section.tech p img, section.features img
     vertical-align: text-top;
 }
 
+section.support img
+{
+    margin-right: 20;
+    display: inline-block;
+}
+
 section.tech p
 {
     font-size: 18;
 }
 
+section.ar dd
+{
+    margin-bottom: 50;
+}
+
+section.ar dt
+{
+    margin-top: 50;
+}
