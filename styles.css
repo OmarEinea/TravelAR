@@ -178,3 +178,25 @@ section.ar dt
 {
     margin-top: 50;
 }
+
+heading
+{
+    font-size: 35;
+    font-family: cursive;
+    text-align: center;
+    display: block;
+}
+
+#homepic
+{
+    display: block;
+    align-content: center;
+    margin: 30 20 30 20;
+}
+
+#homep
+{
+    font-size: 20;
+    font-family:cursive;
+    text-align: center;
+}
