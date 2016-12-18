@@ -104,8 +104,21 @@ dt
     border-radius: 50%;
 }
 
-#sp li
+ul.sp li
 {
-    font-size: 22;
-    font-family:fantasy
+    font-size: 21;
+    font-family:fantasy;
+    padding-bottom: 12px;
+    list-style-type:square;
+}
+
+p.sp
+{
+   font-size: 24;
+    font-family:fantasy; 
+}
+
+section.support
+{
+    background-color: none;
 }
