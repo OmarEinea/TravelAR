@@ -200,3 +200,9 @@ heading
     font-family:cursive;
     text-align: center;
 }
+
+.pic
+{   
+    float: left;
+    margin-right: 200px;
+}
