@@ -104,7 +104,8 @@ dt
     border-radius: 50%;
 }
 
-.sp
+#sp li
 {
-    font-size: 18;
+    font-size: 22;
+    font-family:fantasy
 }
