@@ -1,3 +1,7 @@
+body {
+	background-color: #f5f5f5;
+}
+
 nav {
     background-color: #0069ff;
 }
@@ -87,6 +91,20 @@ input[type=radio]:checked + label:after {
 
 .dropdown-content li > a, .dropdown-content li > span {
     color: #2196f3;
+}
+
+.external-link {
+	font-weight: 300;
+	font-size: 18px;
+	margin-left: -10px !important;
+}
+
+.white-text a {
+	color: white;
+}
+
+.card-panel h5 {
+	line-height: 150%;
 }
 
 #fimage
