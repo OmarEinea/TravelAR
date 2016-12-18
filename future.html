@@ -1,1 +1,37 @@
-<h3>Future Plans</h3>
+<h3>Future Expansiong Plans</h3>
+<img id="map" src="media/map.svg" usemap="#phases">
+
+<map name="phases">
+	<area shape="circle" coords="184,59,4" href="#" data-key="start">
+	<area shape="circle" coords="187,55,25" href="#" data-key="phase2">
+	<area shape="circle" coords="189,54,80" href="#" data-key="phase3">
+	<area shape="circle" coords="268,113,31" href="#" data-key="phase4">
+	<area shape="circle" coords="44,33,44" href="#" data-key="phase4">
+	<area shape="circle" coords="74,107,37" href="#" data-key="phase4">
+</map>
+
+<script type="text/javascript">
+	$("#map").mapster({
+		mapKey: "data-key",
+		showToolTip: true,
+		toolTipContainer: "<div class='card-panel grey darken-4 white-text light' style='margin-top: 100px'></div>",
+		areas: [
+			{
+				key: "start",
+				toolTip: "Starting From UAE"
+			}, {
+				key: "phase2",
+				toolTip: "Middle East, Phase 2"
+			}, {
+				key: "phase3",
+				toolTip: "Europe, Africa & Asia, Phase 3"
+			}, {
+				key: "phase4",
+				toolTip: "Americas & Australia, Phase 4"
+			}
+		]
+	});
+	$(window).bind("resize", function() {
+		$("#map").mapster("resize", $("#content").width());
+	});
+</script>
