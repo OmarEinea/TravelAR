@@ -123,13 +123,15 @@ section.support
     background-color: none;
 }
 
-section.tech p img
+section.tech p img, section.features img
 {
-    display:block;
     margin: auto;
+    display:block;
+    vertical-align: text-top;
 }
 
 section.tech p
 {
     font-size: 18;
 }
+
