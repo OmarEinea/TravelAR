@@ -90,3 +90,11 @@ dt
 {
     font-weight: bold;
 }
+
+.img-circle {
+    
+    float: left;
+    width: 33%;
+    border-radius: 50%;
+}
+
