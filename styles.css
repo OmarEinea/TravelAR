@@ -14,6 +14,12 @@ a {
 	height: 0px;
 }
 
+.row .col.m9 {
+    width: 75%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+}
 .container .row {
 	margin-left: 0;
 	margin-right: 0;
