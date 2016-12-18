@@ -122,3 +122,14 @@ section.support
 {
     background-color: none;
 }
+
+section.tech p img
+{
+    display:block;
+    margin: auto;
+}
+
+section.tech p
+{
+    font-size: 18;
+}
