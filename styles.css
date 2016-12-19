@@ -107,6 +107,38 @@ input[type=radio]:checked + label:after {
 	line-height: 150%;
 }
 
+.maptooltip {
+	margin-top: 100px;
+}
+
+.maptooltip .phase1 {
+	background-color: rgba(27, 94, 32, 0.9) !important;
+}
+
+.maptooltip .phase2 {
+	background-color: rgba(26, 35, 126, 0.9) !important;
+}
+
+.maptooltip .phase3 {
+	background-color: rgba(191, 54, 12, 0.9) !important;
+}
+
+.maptooltip .phase4 {
+	background-color: rgba(62, 39, 35, 0.9) !important;
+}
+
+.collapsible .collapsible-header {
+	padding: 12px 20px;
+	border-bottom: 0;
+	font-weight: 300;
+	font-size: 20px;
+	color: white;
+}
+
+.collapsible .collapsible-body {
+	background-color: white;
+}
+
 #fimage
 { display: block}
 
