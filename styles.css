@@ -108,7 +108,7 @@ input[type=radio]:checked + label:after {
 }
 
 .maptooltip {
-	margin-top: 100px;
+	margin-top: 200px;
 }
 
 .maptooltip .phase1 {
@@ -128,7 +128,7 @@ input[type=radio]:checked + label:after {
 }
 
 .collapsible .collapsible-header {
-	padding: 12px 20px;
+	padding: 16px 32px;
 	border-bottom: 0;
 	font-weight: 300;
 	font-size: 20px;
@@ -137,6 +137,9 @@ input[type=radio]:checked + label:after {
 
 .collapsible .collapsible-body {
 	background-color: white;
+	line-height: 28px;
+	color: #424242;
+	font-size: 16px;
 }
 
 #fimage

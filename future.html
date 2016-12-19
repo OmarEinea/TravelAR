@@ -17,19 +17,47 @@
 		<ul class="collapsible popout" data-collapsible="accordion">
 			<li>
 				<div id="phase1" class="collapsible-header green darken-4 active">Phase 1, Starting From UAE</div>
-				<div class="collapsible-body"><br><br><br><br><br><br><br><br><br><br><br></div>
+				<div class="collapsible-body">
+					<p>
+						We are planning to start our mission from the United Arab of Emirates as our team is in it and we know all about it and because it's an innovation leading country.<br>
+						This all was a project for <a href="https://www.intelak.com/">Intelak Challenge</a>, and as of now, we don't have a fully functional application yet.<br>
+						So we're planning on integrating Augmented Reality technology first as it's the most essential feature that we want to offer.<br>
+						Then we're planning on publishing it in the UAE and announcing it in different events, one of which is the upcomming Think Science.<br>
+						And lastly, starting the production phase by implementing our system in UAE airports.
+					</p>
+				</div>
 			</li>
 			<li>
 				<div id="phase2" class="collapsible-header indigo darken-4">Phase 2, The Middle East</div>
-				<div class="collapsible-body"><br><br><br><br><br><br><br><br><br><br><br></div>
+				<div class="collapsible-body">
+					<p>
+						At this stage, we want to optimize our Android App and try to have it fully functional and ready to go.<br>
+						That includes implementing airport's signs translation between languages used in the Middle East like Arabic, English and Urdu and so on.<br>
+						Also we are planning to include better Augmented Reality graphics for better user experience.<br>
+						And finally, we want to extend our network of supported airport across the Middle East, from Saudi to Turkey and from Eygpt to Iran!. 
+					</p>
+				</div>
 			</li>
 			<li>
 				<div id="phase3" class="collapsible-header deep-orange darken-4">Phase 3, Europe, Africa and Asia</div>
-				<div class="collapsible-body"><br><br><br><br><br><br><br><br><br><br><br></div>
+				<div class="collapsible-body">
+					<p>
+						If we reach this phase, then we're pretty big by now, and that will allow us to continue our plan and extend our system support across the countries of the three middle continents.<br>
+						Extending our system support to Europe, Africa and Asia is going to be a huge challenge and it's going to take a whole lot of time and effort.<br>
+						Another thing would be to start supporting IOS (iPhone OS), hopefully by then our team would have grown enough to include IOS developers who can help us achieve this task.
+					</p>
+				</div>
 			</li>
 			<li>
 				<div id="phase4" class="collapsible-header brown darken-4">Phase 4, The Americas and Australia</div>
-				<div class="collapsible-body"><br><br><br><br><br><br><br><br><br><br><br></div>
+				<div class="collapsible-body">
+					<p>
+						This phase comes at the far end of our plan, it's when we become widely adopted across the globe, and only the far countries have yet to implement our app in their airports.<br>
+						Countries of the two Americas and Australia come at the end, but hey at least we have them in our plan.<br>
+						By now, our system and applications should be complete, well designed and tweaked in the best way possible considering every small detail.<br>
+						This is ambitious I know, but we will at least try and see how things go :)
+					</p>
+				</div>
 			</li>
 		</ul>
 	</div>
@@ -47,9 +75,11 @@
 		fillOpacity: 0.2,
 		singleSelect: true,
 		onClick: function(event) {
-			$("html, body").animate({
-				scrollTop: $(document).height()
-			});
+			if(event.selected) {
+				$("html, body").animate({
+					scrollTop: $(document).height()
+				});
+			}
 			$('#' + event.key).trigger("click", "mapClick");
 		}, areas: [
 			{
@@ -71,6 +101,7 @@
 				toolTip: "<div class='toast rounded phase4'>Phase 4, Americas & Australia</div>"
 			}
 		]
+	// TODO: Fix multi-instanced static tooltips
 	}).mapster("tooltip", "phase1");
 	$(window).bind("resize", function() {
 		$("#map").mapster("resize", $("#content").width());
