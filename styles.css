@@ -89,6 +89,14 @@ a {
 	margin-right: 0;
 }
 
+.card-image .row {
+	margin-bottom: 0;
+}
+
+.card-image .col {
+	padding: 0;
+}
+
 #demo-icons .row {
 	margin-top: 80px;
 }
