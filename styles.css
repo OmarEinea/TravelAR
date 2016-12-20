@@ -174,24 +174,18 @@ dt
     border-radius: 50%;
 }
 
-ul.sp li
+section.support article
 {
     font-size: 21;
     font-family:fantasy;
-    padding: 20px;
+    margin-bottom: 20;
+    margin-top: 45;
 }
 
 p.sp
 {
    font-size: 24;
     font-family:fantasy; 
-}
-
-section.support li
-{
-    text-align: justify;
-    margin-bottom: 20;
-    margin-top: 45;
 }
 
 section.features #f1,#f2,#f3
@@ -206,12 +200,6 @@ section.tech p img, section.features img,img.arpic
     margin: auto;
     display: block;
     vertical-align: text-top;
-}
-
-section.support img
-{
-    margin: 0 25 0 0;
-    display: inline-block;
 }
 
 section.support li
