@@ -185,7 +185,7 @@ section.support article
 p.sp
 {
    font-size: 24;
-    font-family:fantasy; 
+   font-family:fantasy; 
 }
 
 section.features #f1,#f2,#f3
@@ -200,12 +200,6 @@ section.tech p img, section.features img,img.arpic
     margin: auto;
     display: block;
     vertical-align: text-top;
-}
-
-section.support li
-{
-    text-align: right;
-    vertical-align: top;
 }
 
 section.tech p
