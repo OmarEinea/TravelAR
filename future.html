@@ -1,37 +1,114 @@
-<h3>Future Expansion Plans</h3>
-<img id="map" src="media/map.svg" usemap="#phases">
-
-<map name="phases">
-	<area shape="circle" coords="184,59,4" href="#" data-key="start">
-	<area shape="circle" coords="187,55,25" href="#" data-key="phase2">
-	<area shape="circle" coords="189,54,80" href="#" data-key="phase3">
-	<area shape="circle" coords="268,113,31" href="#" data-key="phase4">
-	<area shape="circle" coords="44,33,44" href="#" data-key="phase4">
-	<area shape="circle" coords="74,107,37" href="#" data-key="phase4">
-</map>
+<div class="row">
+	<h3>Future Expansion Plans</h3>
+</div>
+<div class="row">
+	<img id="map" src="media/map.svg" usemap="#phases">
+	<map name="phases">
+		<area shape="circle" coords="184,59,4" href="#" data-key="phase1">
+		<area shape="circle" coords="187,55,25" href="#" data-key="phase2">
+		<area shape="circle" coords="189,54,80" href="#" data-key="phase3">
+		<area shape="circle" coords="268,113,31" href="#" data-key="phase4">
+		<area shape="circle" coords="44,33,43" href="#" data-key="phase4">
+		<area shape="circle" coords="74,107,37" href="#" data-key="phase4">
+	</map>
+</div>
+<div class="row">
+	<div class="col l8 offset-l2 s12">
+		<ul class="collapsible popout" data-collapsible="accordion">
+			<li>
+				<div id="phase1" class="collapsible-header green darken-4 active">Phase 1, Starting From UAE</div>
+				<div class="collapsible-body">
+					<p>
+						We are planning to start our mission from the United Arab of Emirates as our team is in it and we know all about it and because it's an innovation leading country.<br>
+						This all was a project for <a href="https://www.intelak.com/">Intelak Challenge</a>, and as of now, we don't have a fully functional application yet.<br>
+						So we're planning on integrating Augmented Reality technology first as it's the most essential feature that we want to offer.<br>
+						Then we're planning on publishing it in the UAE and announcing it in different events, one of which is the upcomming Think Science.<br>
+						And lastly, starting the production phase by implementing our system in UAE airports.
+					</p>
+				</div>
+			</li>
+			<li>
+				<div id="phase2" class="collapsible-header indigo darken-4">Phase 2, The Middle East</div>
+				<div class="collapsible-body">
+					<p>
+						At this stage, we want to optimize our Android App and try to have it fully functional and ready to go.<br>
+						That includes implementing airport's signs translation between languages used in the Middle East like Arabic, English and Urdu and so on.<br>
+						Also we are planning to include better Augmented Reality graphics for better user experience.<br>
+						And finally, we want to extend our network of supported airport across the Middle East, from Saudi to Turkey and from Eygpt to Iran!. 
+					</p>
+				</div>
+			</li>
+			<li>
+				<div id="phase3" class="collapsible-header deep-orange darken-4">Phase 3, Europe, Africa and Asia</div>
+				<div class="collapsible-body">
+					<p>
+						If we reach this phase, then we're pretty big by now, and that will allow us to continue our plan and extend our system support across the countries of the three middle continents.<br>
+						Extending our system support to Europe, Africa and Asia is going to be a huge challenge and it's going to take a whole lot of time and effort.<br>
+						Another thing would be to start supporting IOS (iPhone OS), hopefully by then our team would have grown enough to include IOS developers who can help us achieve this task.
+					</p>
+				</div>
+			</li>
+			<li>
+				<div id="phase4" class="collapsible-header brown darken-4">Phase 4, The Americas and Australia</div>
+				<div class="collapsible-body">
+					<p>
+						This phase comes at the far end of our plan, it's when we become widely adopted across the globe, and only the far countries have yet to implement our app in their airports.<br>
+						Countries of the two Americas and Australia come at the end, but hey at least we have them in our plan.<br>
+						By now, our system and applications should be complete, well designed and tweaked in the best way possible considering every small detail.<br>
+						This is ambitious I know, but we will at least try and see how things go :)
+					</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
 
 <script type="text/javascript">
+	$(".collapsible").collapsible();
 	$("#map").mapster({
 		mapKey: "data-key",
 		showToolTip: true,
-		toolTipContainer: "<div class='card-panel grey darken-4 white-text light' style='margin-top: 100px'></div>",
-		areas: [
+		toolTipContainer: "<div class='maptooltip'></div>",
+		stroke: true,
+		strokeOpacity: 0.9,
+		strokeWidth: 3,
+		fillOpacity: 0.2,
+		singleSelect: true,
+		onClick: function(event) {
+			if(event.selected) {
+				$("html, body").animate({
+					scrollTop: $(document).height()
+				});
+			}
+			$('#' + event.key).trigger("click", "mapClick");
+		}, areas: [
 			{
-				key: "start",
-				toolTip: "Starting From UAE, Phase 1"
+				key: "phase1",
+				selected: true,
+				strokeColor: "1b5e20",
+				toolTip: "<div class='toast rounded phase1'>Starting From UAE</div>"
 			}, {
 				key: "phase2",
-				toolTip: "Middle East, Phase 2"
+				strokeColor: "1a237e",
+				toolTip: "<div class='toast rounded phase2'>Phase 2, Middle East</div>"
 			}, {
 				key: "phase3",
-				toolTip: "Europe, Africa & Asia, Phase 3"
+				strokeColor: "bf360c",
+				toolTip: "<div class='toast rounded phase3'>Phase 3, Europe, Africa & Asia</div>"
 			}, {
 				key: "phase4",
-				toolTip: "Americas & Australia, Phase 4"
+				strokeColor: "3e2723",
+				toolTip: "<div class='toast rounded phase4'>Phase 4, Americas & Australia</div>"
 			}
 		]
-	});
+	// TODO: Fix multi-instanced static tooltips
+	}).mapster("tooltip", "phase1");
 	$(window).bind("resize", function() {
 		$("#map").mapster("resize", $("#content").width());
+	});
+	$(".collapsible-header").click(function(event, data) {
+		if(data != "mapClick") {
+			$("#map").mapster("set", !$("#map").mapster("get", $(this).attr("id")), $(this).attr("id"));
+		}
 	});
 </script>
