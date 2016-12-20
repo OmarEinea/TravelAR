@@ -201,17 +201,23 @@ section.features #f1,#f2,#f3
     display:block;
 }
 
-section.tech p img, section.features img
+section.tech p img, section.features img,img.arpic
 {
     margin: auto;
-    display:block;
+    display: block;
     vertical-align: text-top;
 }
 
 section.support img
 {
-    margin-right: 20;
+    margin: 0 25 0 0;
     display: inline-block;
+}
+
+section.support li
+{
+    text-align: right;
+    vertical-align: top;
 }
 
 section.tech p
