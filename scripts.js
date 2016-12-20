@@ -44,6 +44,11 @@ $(document).ready(function() {
 			// Load page according to hash from <a>'s href
 			$("#content").load(page + ".html");
 		}
+		if(location.hash == "#Home") {
+			$("body").addClass("welcome");
+		} else {
+			$("body").removeClass("welcome");
+		}
 	});
 	// Deactivate all links initially
 	$(".tab a").removeClass("active");

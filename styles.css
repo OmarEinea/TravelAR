@@ -2,8 +2,65 @@ body {
 	background-color: #f5f5f5;
 }
 
+.welcome {
+	background-image: url("media/welcome.png"), url("media/welcome-repeat.png");
+	background-repeat: no-repeat, repeat-x;
+	background-position: center 60, calc(50% + 160px) 60;
+}
+
+#welcome {
+	position: relative;
+	height: 800px;
+}
+
+#welcome .bold {
+	margin-top: 350px;
+}
+
+#welcome .brown-text {
+	position: absolute;
+	bottom: 0;
+	left: 0.75rem;
+}
+
+.mid-vertical {
+	display: table;
+	height: 512px;
+}
+
+.mid-vertical span {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.mid-vertical span * {
+	font-weight: 300;
+}
+
+.full-width {
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+.parallax-container {
+	height: 300px;
+}
+
+.space {
+	height: 26px;
+}
+
 nav {
-    background-color: #0069ff;
+    background-color: #5b1f1e;
+}
+
+.browny {
+	color: #5b1f1e;
+}
+
+.orangey {
+	color: #ff844c;
 }
 
 h3 {
@@ -18,18 +75,9 @@ a {
 	height: 0px;
 }
 
-.row .col.m9 {
-    width: 75%;
-    margin-left: auto;
-    left: auto;
-    right: auto;
-}
 .container .row {
 	margin-left: 0;
 	margin-right: 0;
-}
-img{
-    float:left;
 }
 
 #demo-icons .row {
@@ -164,8 +212,6 @@ ul.sp li
     padding: 20px;
 }
 
-
-
 p.sp
 {
    font-size: 24;
@@ -214,25 +260,8 @@ section.ar dt
     margin-top: 50;
 }
 
-heading
-{
-    font-size: 35;
-    font-family: cursive;
-    text-align: center;
-    display: block;
-}
-
-#homepic
-{
-    display: block;
-    align-content: center;
-    margin: 30 20 30 20;
-}
-
-p.homep
-{
-    font-size: 20;
-    font-family:cursive;
+heading {
+    font-size: 35px;
     text-align: center;
 }
 
