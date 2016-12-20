@@ -55,6 +55,11 @@ body {
 	height: 26px;
 }
 
+.img-right {
+	display: block;
+	margin-left: auto;
+}
+
 nav {
     background-color: #5b1f1e;
 }
@@ -194,16 +199,7 @@ input[type=radio]:checked + label:after {
 	font-size: 16px;
 }
 
-#fimage
-{ display: block}
-
-dt
-{
-    font-weight: bold;
-}
-
 .img-circle {
-    
     float: left;
     width: 33%;
     border-radius: 50%;
