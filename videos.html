@@ -1,26 +1,37 @@
-<div class="container">
-<h3>Video</h3>
+<div class="col l10 offset-l1 s12">
+	<div class="card">
+		<div class="card-image">
+			<iframe id="youtube" src="https://www.youtube.com/embed/CNnKOnBgvgw" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<div class="card-content">
+			<span class="card-title">Who TravelAR App Works</span>
+			<p>This video is a virtual demo of how the app will help you navigate your way through the airport</p>
+		</div>
+	</div>
+</div>
+<div class="col l10 offset-l1 s12">
+	<div class="card horizontal">
+		<div class="card-image">
+			<video width="300" controls>
+				<source src="media/travelar.mp4" type="video/mp4">
+				Your browser does not support HTML5 video.
+			</video>
+		</div>
+		<div class="card-stacked">
+			<div class="card-content">
+				<span class="card-title">Who to Use TravelAR App</span>
+				<p>This video shows you how the interface of the app looks like and how it's used, whether you're taking a flight or just using one of the airports utilities.</p>
+				<br><br><br><br><br><br>
+				<a onclick="$.click('#Demo')" class="col s12 btn-large" style="height: auto">Try It Yourself<br>No One Will Eat You!</a>
+			</div>
+		</div>
+	</div>
+</div>
 
-<div class="row">
-<div class="col s12 m8">
-<div class="card blue lighten-3">
-<div class="card-content black-text">
-
-<p>We will now showcase some videos that will give you an idea about our app and how it functions also it will help you in understanding the capabilities of our app</p>
-</div>
-<div class="card-action">
-<p>The video shown below is a virtual demo of how the app will help you with navigating your way in the airport</p>
-<iframe width="400" height="300" src="https://www.youtube.com/embed/CNnKOnBgvgw" frameborder="0" allowfullscreen></iframe><br>
-
-    <p>This video shows you how the interface of the app is and how to use it whether you're taking a flight or just going to use any of the airports utilities </p>
-<video width="400" controls>
-  <source src="media/travelar.mp4" type="video/mp4">
-
-  Your browser does not support HTML5 video.
-</video>
-
-</div>
-</div>
-</div>
-</div>
-</div>
+<script type="text/javascript">
+	function resizeVideo() {
+		$("#youtube").height($("#youtube").width()*45/80);	
+	}
+	$(window).resize(resizeVideo);
+	resizeVideo();
+</script>

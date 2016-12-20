@@ -103,7 +103,7 @@
 		]
 	// TODO: Fix multi-instanced static tooltips
 	}).mapster("tooltip", "phase1");
-	$(window).bind("resize", function() {
+	$(window).resize(function() {
 		$("#map").mapster("resize", $("#content").width());
 	});
 	$(".collapsible-header").click(function(event, data) {

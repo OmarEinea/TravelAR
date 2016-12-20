@@ -97,6 +97,12 @@ a {
 	padding: 0;
 }
 
+#youtube {
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	width: 100%;
+}
+
 #demo-icons .row {
 	margin-top: 80px;
 }
@@ -121,6 +127,12 @@ li ol {
 @media only screen and (min-width: 993px) {
 	#forgot-password {
 		width: 30%;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.card.horizontal {
+		display: block;
 	}
 }
 /* label focus color */
