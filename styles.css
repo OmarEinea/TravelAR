@@ -219,25 +219,6 @@ p.sp
    font-family:fantasy; 
 }
 
-section.features #f1,#f2,#f3
-{
-    text-align: center;
-    margin-bottom: 50;
-    display:block;
-}
-
-section.tech p img, section.features img,img.arpic
-{
-    margin: auto;
-    display: block;
-    vertical-align: text-top;
-}
-
-section.tech p
-{
-    font-size: 18;
-}
-
 section.ar dd
 {
     margin-bottom: 50;
