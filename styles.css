@@ -28,9 +28,7 @@ a {
 	margin-left: 0;
 	margin-right: 0;
 }
-img{
-    float:left;
-}
+
 
 #demo-icons .row {
 	margin-top: 80px;
@@ -201,11 +199,7 @@ p.homep
     text-align: center;
 }
 
-.pic
-{   
-    float: left;
-    margin-right: 200px;
-}
+
 
 body
 {
