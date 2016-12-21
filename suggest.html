@@ -1,40 +1,66 @@
-
-    <div class="container">
-        <h3>Suggestions</h3>
-
-
-<p>If there is anything that you did not like or think should be improved, we'd be delighted to hear it from you in this form. This way, we could improve the app and offer additional useful content to help users navigate and interact with the app</p>
-
-  <div class="row">
-    <form class="col s12">
-      <div class="row">
-        <div class="input-field col s6">
-          
-          <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-          <label for="icon_prefix2">Suggestions</label>
-        </div>
-      </div>
-    
-        
-            <p>Did this website have enough information about the app?</p>
-    <p>
-      <input name="group1" type="radio" id="test1" />
-      <label for="test1">Yes</label>
-    </p>
-    <p>
-      <input name="group1" type="radio" id="test2" />
-      <label for="test2">No</label>
-    </p>
-            <p>How would you rate the app?  ( 1= Hated it! 5= It's okay..  10= I love it!)</p>
-            <div class="range-field">
-      <input type="range" id="test5" min="0" max="10" color="blue accent-1" />
-    </div>
-  
-<a class="waves-effect waves-light btn blue accent-3">Submit</a>
-       
-<a class="waves-effect waves-light btn blue accent-3">Clear</a>
-
-      </form>  
-        </div>
- 
+<div class="row center light">
+	<div class="row"></div>
+	<h4>Share Your Thoughts, We're Listening :)</h4>
+	<div class="row"></div>
+	<p style="font-size: 18px">
+		If there is anything that you did not like or think should be improved, we'd be delighted to hear it from you in this form.<br>
+		This way, we could improve the app and offer additional useful content to help users navigate and interact with the app.
+	</p>
 </div>
+<div class="col l6 offset-l3 s12">
+	<div class="card">
+		<div class="card-content">
+			<div class="row">
+				<div class="input-field col s12">
+					<select>
+						<option selected>Share a Suggestion</option>
+						<option>Report an Issue</option>
+						<option>Inspire with an Idea</option>
+					</select>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="fa fa-pencil prefix"></i>
+					<textarea id="suggestion" class="materialize-textarea"></textarea>
+					<label for="suggestion">Your Suggestion, Issue or Idea</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12">
+					<p class="grey-text text-darken-2">Did this website have enough information about the app?</p>
+					<p>
+						<input name="info" type="radio" id="yes" />
+						<label for="yes">Yes</label>
+					</p>
+					<p>
+						<input name="info" type="radio" id="no" />
+						<label for="no">No</label>
+					</p>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col s12">
+					<p class="grey-text text-darken-2">How would you rate the app? (1= Hated it!.. 5= It's okay..  10= I love it!)</p><br>
+					<div class="range-field">
+						<input type="range" id="rate" min="0" max="10" color="blue accent-1" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card-action">
+			<a onclick="Materialize.toast('Thanks for your Feedback', 4000); $.click('#Home')">Submit</a>
+			<a onclick="clearForm()">Clear</a>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$("select").material_select();
+	function clearForm() {
+		$("#no, #yes").removeAttr("checked");
+		$("#suggestion").val("");
+		$("#rate").val(5);
+	}
+</script>
