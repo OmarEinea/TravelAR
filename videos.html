@@ -1,7 +1,8 @@
-<div class="col l10 offset-l1 s12">
+<div class="col l10 offset-l1 s12"><!-- the col is used to help us put the elements in place by assigning the sleceted columns for a specefic element-->
 	<div class="card">
-		<div class="card-image">
-			<iframe id="youtube" src="https://www.youtube.com/embed/CNnKOnBgvgw" frameborder="0" allowfullscreen></iframe>
+		<div class="card-image"><!--using the following codes we will implement materialize to give us the cards effect for the pictures with the captions
+-->
+			<iframe id="youtube" src="https://www.youtube.com/embed/CNnKOnBgvgw" frameborder="0" allowfullscreen></iframe><!--we used the iframe tag to embed a video from youtube -->
 		</div>
 		<div class="card-content">
 			<span class="card-title">Who TravelAR App Works</span>
@@ -13,7 +14,7 @@
 	<div class="card horizontal">
 		<div class="card-image">
 			<video width="300" controls>
-				<source src="media/travelar.mp4" type="video/mp4">
+				<source src="media/travelar.mp4" type="video/mp4"><!--using the video tag and src we embeded a video from our library to be viewed on the web site-->
 				Your browser does not support HTML5 video.
 			</video>
 		</div>
@@ -27,7 +28,7 @@
 		</div>
 	</div>
 </div>
-
+<!-- The following script is used for resizing the video player for the embeded youtube video-->
 <script type="text/javascript">
 	function resizeVideo() {
 		$("#youtube").height($("#youtube").width()*45/80);	
