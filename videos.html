@@ -1,7 +1,6 @@
-<div class="col l10 offset-l1 s12"><!-- the col is used to help us put the elements in place by assigning the sleceted columns for a specefic element-->
+<div class="col l10 offset-l1 s12"><!-- the col is used to help us put the elements in place by assigning the sleceted columns for a specefic element -->
 	<div class="card">
-		<div class="card-image"><!--using the following codes we will implement materialize to give us the cards effect for the pictures with the captions
--->
+		<div class="card-image"><!-- using the following codes we will implement materialize to give us the cards effect for the pictures with the captions -->
 			<iframe id="youtube" src="https://www.youtube.com/embed/CNnKOnBgvgw" frameborder="0" allowfullscreen></iframe><!--we used the iframe tag to embed a video from youtube -->
 		</div>
 		<div class="card-content">
@@ -13,8 +12,8 @@
 <div class="col l10 offset-l1 s12">
 	<div class="card horizontal">
 		<div class="card-image">
-			<video width="300" controls>
-				<source src="media/travelar.mp4" type="video/mp4"><!--using the video tag and src we embeded a video from our library to be viewed on the web site-->
+			<video width="310" controls>
+				<source src="media/travelar.mp4" type="video/mp4"><!-- using the video tag and src we embeded a video from our library to be viewed on the web site -->
 				Your browser does not support HTML5 video.
 			</video>
 		</div>
@@ -22,13 +21,13 @@
 			<div class="card-content">
 				<span class="card-title">Who to Use TravelAR App</span>
 				<p>This video shows you how the interface of the app looks like and how it's used, whether you're taking a flight or just using one of the airports utilities.</p>
-				<br><br><br><br><br><br>
-				<a onclick="$.click('#Demo')" class="col s12 btn-large" style="height: auto">Try It Yourself<br>No One Will Eat You!</a>
+                <br>
+                <a onclick="$.click('#Demo')" class="col s12 btn-large">Try It Yourself<br><span class="hide-on-med-and-down">No One Will Eat You!</span></a>
 			</div>
 		</div>
 	</div>
 </div>
-<!-- The following script is used for resizing the video player for the embeded youtube video-->
+<!-- The following script is used for resizing the video player for the embeded youtube video -->
 <script type="text/javascript">
 	function resizeVideo() {
 		$("#youtube").height($("#youtube").width()*45/80);	

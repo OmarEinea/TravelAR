@@ -23,20 +23,6 @@ body {
 	left: 0.75rem;
 }
 
-.mid-vertical {
-	display: table;
-	height: 512px;
-}
-
-.mid-vertical span {
-	display: table-cell;
-	vertical-align: middle;
-}
-
-.mid-vertical span * {
-	font-weight: 300;
-}
-
 .full-width {
 	position: absolute;
 	left: 0;
@@ -124,16 +110,65 @@ li ol {
 	height: calc(100% - 48px);
 }
 
+.card.horizontal video {
+    border-top-left-radius: 3px;
+}
+
+img:not(.materialboxed) {
+    width: 480px;
+}
+
+/* Large Screen Sizes */
 @media only screen and (min-width: 993px) {
 	#forgot-password {
 		width: 30%;
 	}
+
+    .mid-vertical {
+        display: table;
+        height: 480px;
+    }
+
+    .mid-vertical span {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    
+    .card.horizontal a {
+        height: auto;
+        margin-top: 150px;
+    }
 }
 
-@media only screen and (max-width: 600px) {
+/* Medium and Small Screen Sizes */
+@media only screen and (max-width: 992px) {
+    .mid-vertical span {
+        text-align: center;
+    }
+    
+    .mid-vertical {
+        margin-bottom: 48px;
+        margin-top: -12px
+    }
+    
 	.card.horizontal {
 		display: block;
+        width: 310px;
+        margin: auto;
 	}
+    
+    .card.horizontal video {
+        border-top-right-radius: 3px;
+    }
+    
+    img:not(.materialboxed) {
+        display: block;
+        margin: auto;
+    }
+}
+
+.mid-vertical span * {
+	font-weight: 300;
 }
 
 .input-field input[name=gender] + label i {
