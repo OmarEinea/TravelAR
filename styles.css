@@ -23,6 +23,10 @@ body {
 	left: 0.75rem;
 }
 
+#content {
+	min-height: 75%;
+}
+
 .full-width {
 	position: absolute;
 	left: 0;
@@ -114,7 +118,7 @@ li ol {
     border-top-left-radius: 3px;
 }
 
-img:not(.materialboxed) {
+img:not(.materialboxed):not(#map) {
     width: 480px;
 }
 
@@ -223,6 +227,15 @@ img:not(.materialboxed) {
 	color: white;
 }
 
+.collapsible li:first-of-type,
+.collapsible li.active, .collapsible li.active + li,
+.collapsible li:first-of-type .collapsible-header,
+.collapsible li.active .collapsible-header,
+.collapsible li.active + li .collapsible-header {
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
 .collapsible .collapsible-body {
 	background-color: white;
 	line-height: 28px;
@@ -230,8 +243,11 @@ img:not(.materialboxed) {
 	font-size: 16px;
 }
 
-.img-circle {
-    float: left;
-    width: 33%;
-    border-radius: 50%;
+.previous-header, .collapsible li.active,
+.collapsible li:last-of-type:not(.active),
+.previous-header .collapsible-header,
+.collapsible li.active .collapsible-body,
+.collapsible li:last-of-type:not(.active) .collapsible-header {
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
 }

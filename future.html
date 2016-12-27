@@ -1,5 +1,7 @@
-<div class="row">
-	<h3>Future Expansion Plans</h3>
+<div class="row center light">
+	<div class="row"></div>
+	<h4>Future Expansion Plans</h4>
+	<div class="row"></div>
 </div>
 <div class="row">
 	<img id="map" src="media/map.svg" usemap="#phases">
@@ -64,7 +66,6 @@
 </div>
 
 <script type="text/javascript">
-	$(".collapsible").collapsible();
 	$("#map").mapster({
 		mapKey: "data-key",
 		showToolTip: true,
@@ -77,8 +78,8 @@
 		onClick: function(event) {
 			if(event.selected) {
 				$("html, body").animate({
-					scrollTop: $(document).height()
-				});
+					scrollTop: $(".collapsible").offset().top + (eval(event.key.slice(5)) - 1) * 75
+				}, 1000);
 			}
 			$('#' + event.key).trigger("click", "mapClick");
 		}, areas: [
@@ -101,10 +102,19 @@
 				toolTip: "<div class='toast rounded phase4'>Phase 4, Americas & Australia</div>"
 			}
 		]
-	// TODO: Fix multi-instanced static tooltips
 	}).mapster("tooltip", "phase1");
+	$(document).click(function() {
+		$("#map").mapster("tooltip");
+	});
 	$(window).resize(function() {
 		$("#map").mapster("resize", $("#content").width());
+	});
+	$(".collapsible").collapsible({
+		onOpen: function(element) {
+			$(element).prev().addClass("previous-header");
+		}, onClose: function(element) {
+			$(element).prev().removeClass("previous-header");
+		}
 	});
 	$(".collapsible-header").click(function(event, data) {
 		if(data != "mapClick") {
