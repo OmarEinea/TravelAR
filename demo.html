@@ -1,4 +1,4 @@
-<div class="col l5">
+<div class="col l5 m12">
 	<div class="row"></div>
 	<div class="row">
 		<h4>TravelAR App Demo</h4>
@@ -28,27 +28,31 @@
 		</a>
 	</div>
 </div>
-<div class="col l4 offset-l1">
-	<iframe src="https://appetize.io/embed/pw8m6ebfy0va6a0e8d65dcjjqc?device=nexus5&scale=77&orientation=portrait&osVersion=7.0"
-			width="325px" height="640px" frameborder="0" scrolling="no"></iframe>
-</div>
-<div id="demo-icons" class="col l1">
+<div id="demo-icons" class="col right">
 	<div class="row"><a href="https://appetize.io/app/pw8m6ebfy0va6a0e8d65dcjjqc" target="_blank">
 		<i class="fa fa-fw fa-3x fa-external-link tooltipped" data-position="right" data-delay="100" data-tooltip="External Controls"></i></a></div>
-	<div class="row"><a href="#fullscreen">
+	<div class="row"><a id="fullscreen-demo" href="#fullscreen">
 		<i class="fa fa-fw fa-3x fa-arrows-alt tooltipped" data-position="right" data-delay="100" data-tooltip="Demo In Fullscreen"></i></a></div>
 	<div class="row"><a onclick="Materialize.toast('Copied Link to Clipboard, Now Share it!', 4000)">
 		<i class="fa fa-fw fa-3x fa-share-alt tooltipped" data-position="right" data-delay="100" data-tooltip="Share Demo Link"></i></a></div>
 </div>
-<!-- TODO: Make fullscreen content more responsive -->
+<div class="col right">
+	<iframe src="https://appetize.io/embed/pw8m6ebfy0va6a0e8d65dcjjqc?device=nexus5&scale=77&orientation=portrait&osVersion=7.0"
+			width="325px" height="640px" frameborder="0" scrolling="no"></iframe>
+</div>
 <div id="fullscreen" class="modal">
 	<div class="modal-content">
-		<iframe src="https://appetize.io/embed/pw8m6ebfy0va6a0e8d65dcjjqc?device=nexus9&scale=70&orientation=portrait&osVersion=7.0"
-			frameborder="0" scrolling="no"></iframe>
+		<iframe id="nexus9" frameborder="0" scrolling="no" style="width: 100%"></iframe>
 	</div>
 </div>
 
 <script type="text/javascript">
 	$(".tooltipped").tooltip();
 	$(".modal").modal();
+	$("#fullscreen-demo").click(function() {
+		$("#fullscreen").width(($(window).height() + 16) * 866 / 1288);
+		$("#nexus9").attr("height", $(window).height() - 55)
+			.attr("src", "https://appetize.io/embed/pw8m6ebfy0va6a0e8d65dcjjqc?device=nexus9&scale=" +
+				  ($(window).height() - 55) * 100 / 1288 + "&orientation=portrait&osVersion=7.0");
+	});
 </script>

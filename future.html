@@ -76,12 +76,7 @@
 		fillOpacity: 0.2,
 		singleSelect: true,
 		onClick: function(event) {
-			if(event.selected) {
-				$("html, body").animate({
-					scrollTop: $(".collapsible").offset().top + (eval(event.key.slice(5)) - 1) * 75
-				}, 1000);
-			}
-			$('#' + event.key).trigger("click", "mapClick");
+			$('#' + event.key).trigger("click", event.selected ? "mapOpen" : "mapClose");
 		}, areas: [
 			{
 				key: "phase1",
@@ -103,6 +98,9 @@
 			}
 		]
 	}).mapster("tooltip", "phase1");
+	function highlight(tag) {
+		$("#map").mapster("set", !$("#map").mapster("get", $(tag).attr("id")), $(tag).attr("id"));
+	}
 	$(document).click(function() {
 		$("#map").mapster("tooltip");
 	});
@@ -116,9 +114,13 @@
 			$(element).prev().removeClass("previous-header");
 		}
 	});
-	$(".collapsible-header").click(function(event, data) {
-		if(data != "mapClick") {
-			$("#map").mapster("set", !$("#map").mapster("get", $(this).attr("id")), $(this).attr("id"));
+	$(".collapsible-header").click(function(event, click) {
+		if(!click) {
+			highlight(this);
+		} else if (click != "mapClose") {
+			$("body").animate({
+				scrollTop: $(".collapsible").offset().top + (eval($(this).attr("id").slice(5)) - 1) * 75
+			}, 1000);
 		}
 	});
 </script>

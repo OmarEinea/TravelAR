@@ -1,11 +1,12 @@
-body {
+html, body:not(.welcome) {
+	height: 100%;
 	background-color: #f5f5f5;
 }
 
 .welcome {
 	background-image: url("media/welcome.png"), url("media/welcome-repeat.png");
 	background-repeat: no-repeat, repeat-x;
-	background-position: center 60, calc(50% + 160px) 60;
+	background-position: center 60px, calc(50% + 160px) 60px;
 }
 
 #welcome {
@@ -104,14 +105,8 @@ li ol {
 #fullscreen {
 	position: absolute;
 	max-height: 100%;
-	width: 656px;
 	top: 0 !important;
 	bottom: 0;
-}
-
-#fullscreen iframe {
-	width: 100%;
-	height: calc(100% - 48px);
 }
 
 .card.horizontal video {
@@ -185,7 +180,7 @@ img:not(.materialboxed):not(#map) {
 	width: calc(100% - 4.5rem) !important;
 }
 
-.external-link {
+.subtitle {
 	font-weight: 300;
 	font-size: 18px;
 	margin-left: -10px !important;
@@ -250,4 +245,10 @@ img:not(.materialboxed):not(#map) {
 .collapsible li:last-of-type:not(.active) .collapsible-header {
 	border-bottom-left-radius: 3px;
 	border-bottom-right-radius: 3px;
+}
+
+.btn-flat {
+	height: 42px;
+	line-height: 42px;
+	margin-top: 4px;
 }
